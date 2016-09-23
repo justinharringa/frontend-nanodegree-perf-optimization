@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justinharringa/mobile-portfolio.git"
+    "url": "git+https://github.com/justinharringa/frontend-nanodegree-perf-optimization.git"
   },
   "author": "Justin Harringa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/justinharringa/mobile-portfolio/issues"
+    "url": "https://github.com/justinharringa/frontend-nanodegree-perf-optimization/issues"
   },
-  "homepage": "https://github.com/justinharringa/mobile-portfolio#readme",
+  "homepage": "https://github.com/justinharringa/frontend-nanodegree-perf-optimization#readme",
   "devDependencies": {
     "ngrok": "^2.1.8"
   }
