@@ -32,26 +32,7 @@ module.exports = function (grunt) {
                     strategy: "mobile"
                 }
             }
-        }
-    });
-
-    // Register customer task for ngrok
-    grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function () {
-        var done = this.async();
-        var port = 9292;
-
-        ngrok.connect(port, function (err, url) {
-            if (err !== null) {
-                grunt.fail.fatal(err);
-                return done();
-            }
-            grunt.config.set('pagespeed.options.url', url);
-            grunt.task.run('pagespeed');
-            done();
-        });
-    });
-
-    grunt.initConfig({
+        },
         'http-server': {
             'dev': {
                 // the server root directory
@@ -78,6 +59,23 @@ module.exports = function (grunt) {
 
         }
     });
+
+    // Register customer task for ngrok
+    grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function () {
+        var done = this.async();
+        var port = 9292;
+
+        ngrok.connect(port, function (err, url) {
+            if (err !== null) {
+                grunt.fail.fatal(err);
+                return done();
+            }
+            grunt.config.set('pagespeed.options.url', url);
+            grunt.task.run('pagespeed');
+            done();
+        });
+    });
+
     grunt.loadNpmTasks('grunt-http-server');
 
     // Register default tasks
