@@ -9,7 +9,7 @@
 
 var ngrok = require('ngrok');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     // Load grunt tasks
     require('load-grunt-tasks')(grunt);
@@ -36,11 +36,11 @@ module.exports = function(grunt) {
     });
 
     // Register customer task for ngrok
-    grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function() {
+    grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function () {
         var done = this.async();
         var port = 9292;
 
-        ngrok.connect(port, function(err, url) {
+        ngrok.connect(port, function (err, url) {
             if (err !== null) {
                 grunt.fail.fatal(err);
                 return done();
@@ -50,6 +50,35 @@ module.exports = function(grunt) {
             done();
         });
     });
+
+    grunt.initConfig({
+        'http-server': {
+            'dev': {
+                // the server root directory
+                root: ".",
+
+                // the server port
+                // can also be written as a function, e.g.
+                // port: function() { return 8282; }
+                port: 8080,
+
+                // the host ip address
+                // If specified to, for example, "127.0.0.1" the server will
+                // only be available on that ip.
+                // Specify "0.0.0.0" to be available everywhere
+                host: "0.0.0.0",
+
+                cache: "300",
+                showDir: true,
+                autoIndex: true,
+
+                // server default file extension
+                ext: "html"
+            }
+
+        }
+    });
+    grunt.loadNpmTasks('grunt-http-server');
 
     // Register default tasks
     grunt.registerTask('default', ['psi-ngrok']);
