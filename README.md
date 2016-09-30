@@ -7,8 +7,15 @@ You should install Node.js AND update npm following [these instructions](https:/
 You will just need to run `npm install` to download the dependencies so long as you have installed Node.js 
 and updated npm as per the instructions referenced above.
 
-## Check PageSpeed Insights
+## Usage 
+
+### Check PageSpeed Insights
 Simply run `grunt` to get PageSpeed Insights output
+
+### Load via HTTP server to profile
+Run the following command from the root directory of the project to be able to load via an HTTP Server:
+
+```grunt http-server:dev```
 
 # Original README content
 
