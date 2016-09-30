@@ -1,3 +1,17 @@
+# Project Requirements
+
+## Install Node.js
+You should install Node.js AND update npm following [these instructions](https://docs.npmjs.com/getting-started/installing-node).
+
+## Install Dependencies
+You will just need to run `npm install` to download the dependencies so long as you have installed Node.js 
+and updated npm as per the instructions referenced above.
+
+## Check PageSpeed Insights
+Simply run `grunt` to get PageSpeed Insights output
+
+# Original README content
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
