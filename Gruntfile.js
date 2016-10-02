@@ -63,7 +63,8 @@ module.exports = function (grunt) {
                     {expand: true, cwd: 'src/', src: ['**'], dest: 'dist/'}
                 ]
             }
-        }
+        },
+        clean: ['dist']
     });
 
     // Register customer task for ngrok
@@ -84,7 +85,8 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     // Register default tasks
-    grunt.registerTask('default', ['psi-ngrok']);
+    grunt.registerTask('default', ['clean', 'copy']);
 };
