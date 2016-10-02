@@ -64,7 +64,21 @@ module.exports = function (grunt) {
                 ]
             }
         },
-        clean: ['dist']
+        clean: ['dist'],
+        responsive_images: {
+            main: {
+                options: {
+                    engine: 'im'
+                },
+                files: [{
+                    expand: true,
+                    src: ['img/**/*.{gif,png,jpg,jpeg}',
+                        'views/**/*.{gif,png,jpg,jpeg}'],
+                    cwd: 'src/',
+                    dest: 'dist/'
+                }]
+            }
+        }
     });
 
     // Register customer task for ngrok
@@ -86,7 +100,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
     // Register default tasks
-    grunt.registerTask('default', ['clean', 'copy']);
+    grunt.registerTask('default', ['clean', 'copy', 'responsive_images']);
 };
