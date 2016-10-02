@@ -9,8 +9,12 @@ and updated npm as per the instructions referenced above.
 
 ## Usage 
 
+### Build the project
+Running `grunt` will clean and copy files to the `dist` directory and will also
+generate responsive files for all images.
+
 ### Check PageSpeed Insights
-Simply run `grunt` to get PageSpeed Insights output
+Simply run `grunt psi-ngrok` to get PageSpeed Insights output
 
 ### Load via HTTP server to profile
 Run the following command from the root directory of the project to be able to load via an HTTP Server:
