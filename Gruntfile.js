@@ -85,6 +85,16 @@ module.exports = function (grunt) {
                     dest: 'dist/'
                 }]
             }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'dist/',                   // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+                    dest: 'dist/'                  // Destination path prefix
+                }]
+            }
         }
     });
 
@@ -107,9 +117,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-responsive-images-extender');
 
     // Register default tasks
-    grunt.registerTask('default', ['clean', 'copy', 'responsive_images', 'responsive_images_extender']);
+    grunt.registerTask('default', ['clean', 'copy', 'responsive_images', 'responsive_images_extender', 'imagemin']);
 };
