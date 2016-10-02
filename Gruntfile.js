@@ -1,10 +1,3 @@
-/**
- * grunt-pagespeed-ngrok
- * http://www.jamescryer.com/grunt-pagespeed-ngrok
- *
- * Copyright (c) 2014 James Cryer
- * http://www.jamescryer.com
- */
 'use strict';
 
 var ngrok = require('ngrok');
@@ -36,7 +29,7 @@ module.exports = function (grunt) {
         'http-server': {
             'dev': {
                 // the server root directory
-                root: ".",
+                root: "dist",
 
                 // the server port
                 // can also be written as a function, e.g.
@@ -73,8 +66,22 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     src: ['img/**/*.{gif,png,jpg,jpeg}',
-                        'views/**/*.{gif,png,jpg,jpeg}'],
+                        'views/**/*.{gif,png,jpg,jpeg}',
+                        '!img/profilepic.jpg'],
                     cwd: 'src/',
+                    dest: 'dist/'
+                }]
+            }
+        },
+        responsive_images_extender: {
+            main: {
+                options: {
+                    ignore: ['.hosted']
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{html,htm}'],
+                    cwd: 'dist/',
                     dest: 'dist/'
                 }]
             }
@@ -101,7 +108,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-responsive-images-extender');
 
     // Register default tasks
-    grunt.registerTask('default', ['clean', 'copy', 'responsive_images']);
+    grunt.registerTask('default', ['clean', 'copy', 'responsive_images', 'responsive_images_extender']);
 };

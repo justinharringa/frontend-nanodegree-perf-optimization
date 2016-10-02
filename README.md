@@ -1,7 +1,9 @@
 # Project Requirements
 
-## Install Node.js
+## Install Node.js 5
 You should install Node.js AND update npm following [these instructions](https://docs.npmjs.com/getting-started/installing-node).
+*NOTE*: Node.js 6 won't work properly with grunt-responsive-images-extender 
+([see issue](https://github.com/stephanmax/grunt-responsive-images-extender/issues/12))
 
 ## Install Dependencies
 You will just need to run `npm install` to download the dependencies so long as you have installed Node.js 
