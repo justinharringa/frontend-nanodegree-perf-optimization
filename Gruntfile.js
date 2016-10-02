@@ -112,6 +112,17 @@ module.exports = function (grunt) {
         },
         jshint: {
             all: ['src/**/*.js']
+        },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'dist/',
+                    src: ['**/*.css'],
+                    dest: 'dist/',
+                    ext: '.css'
+                }]
+            }
         }
     });
 
@@ -134,6 +145,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -147,6 +159,7 @@ module.exports = function (grunt) {
             'responsive_images',
             'responsive_images_extender',
             'imagemin',
-            'htmlmin']);
+            'htmlmin',
+            'cssmin']);
     grunt.registerTask('test', ['jshint'])
 };
