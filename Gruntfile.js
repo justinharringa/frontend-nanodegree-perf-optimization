@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true, src: ['src/**'], dest: 'dist/'}
+                    {expand: true, cwd: 'src/', src: ['**'], dest: 'dist/'}
                 ]
             }
         }
