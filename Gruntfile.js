@@ -95,6 +95,20 @@ module.exports = function (grunt) {
                     dest: 'dist/'                  // Destination path prefix
                 }]
             }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{html,htm}'],
+                    cwd: 'dist/',
+                    dest: 'dist/'
+                }]
+            }
         }
     });
 
@@ -118,9 +132,16 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-responsive-images-extender');
 
     // Register default tasks
-    grunt.registerTask('default', ['clean', 'copy', 'responsive_images', 'responsive_images_extender', 'imagemin']);
+    grunt.registerTask('default',
+        ['clean',
+            'copy',
+            'responsive_images',
+            'responsive_images_extender',
+            'imagemin',
+            'htmlmin']);
 };
