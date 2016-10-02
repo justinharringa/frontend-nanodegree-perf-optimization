@@ -109,6 +109,9 @@ module.exports = function (grunt) {
                     dest: 'dist/'
                 }]
             }
+        },
+        jshint: {
+            all: ['src/**/*.js']
         }
     });
 
@@ -133,6 +136,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-responsive-images-extender');
 
@@ -144,4 +148,5 @@ module.exports = function (grunt) {
             'responsive_images_extender',
             'imagemin',
             'htmlmin']);
+    grunt.registerTask('test', ['jshint'])
 };
