@@ -123,6 +123,16 @@ module.exports = function (grunt) {
                     ext: '.css'
                 }]
             }
+        },
+        uglify: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/',
+                    src: '**/*.js',
+                    dest: 'dist/'
+                }]
+            }
         }
     });
 
@@ -149,6 +159,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-responsive-images-extender');
 
@@ -160,6 +171,7 @@ module.exports = function (grunt) {
             'responsive_images_extender',
             'imagemin',
             'htmlmin',
-            'cssmin']);
+            'cssmin',
+            'uglify']);
     grunt.registerTask('test', ['jshint'])
 };
