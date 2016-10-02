@@ -56,7 +56,13 @@ module.exports = function (grunt) {
                 // server default file extension
                 ext: "html"
             }
-
+        },
+        copy: {
+            main: {
+                files: [
+                    {expand: true, src: ['src/**'], dest: 'dist/'}
+                ]
+            }
         }
     });
 
@@ -77,6 +83,7 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-http-server');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Register default tasks
     grunt.registerTask('default', ['psi-ngrok']);
