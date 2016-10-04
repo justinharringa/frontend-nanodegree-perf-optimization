@@ -503,9 +503,11 @@ function updatePositions() {
 
   // Get movingPizzas1 div and get its children (the pizzas)
   var items = document.getElementById('movingPizzas1').childNodes;
+  // Calculate scrollTop / 1250 only once to read scrollTop layout once
+  // before modifying style
+  var scrollTopDividedBy1250 = (document.body.scrollTop / 1250);
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    console.log(phase, document.body.scrollTop / 1250);
+    var phase = Math.sin(scrollTopDividedBy1250 + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
