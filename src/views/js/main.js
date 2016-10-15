@@ -503,16 +503,12 @@ function updatePositions() {
 
   // Get movingPizzas1 div and get its children (the pizzas)
   var items = document.getElementById('movingPizzas1').childNodes;
-  items = Array.prototype.slice.call(items);
   // Calculate scrollTop / 1250 only once to read scrollTop layout once
   // before modifying style
   var scrollTopDividedBy1250 = (document.body.scrollTop / 1250);
-  var leftPositions = items.map(function (pizza) {
-    return pizza.basicLeft
-  });
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scrollTopDividedBy1250 + (i % 5));
-    items[i].style.left = leftPositions[i] + 100 * phase + 'px';
+    items[i].style.transform = 'translateX(' + -100 * phase + 'px)';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -534,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
-    elem.basicLeft = (i % cols) * s;
+    elem.style.left = (i % cols) * s + 'px';
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
