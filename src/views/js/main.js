@@ -519,8 +519,20 @@ function updatePositions() {
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
   }
-  requestAnimationFrame(updatePositions)
 }
+
+// Adapted from https://developers.google.com/web/fundamentals/performance/rendering/debounce-your-input-handlers
+function scrollThosePizzas() {
+  // Prevent multiple rAF callbacks.
+  if (scheduledAnimationFrame)
+    return;
+
+  var scheduledAnimationFrame = true;
+
+  requestAnimationFrame(updatePositions);
+}
+
+window.addEventListener('scroll', scrollThosePizzas);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
@@ -534,5 +546,5 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
-  requestAnimationFrame(updatePositions);
+  updatePositions();
 });
