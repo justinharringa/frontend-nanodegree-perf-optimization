@@ -42,7 +42,8 @@ an HTTP Server:
 
 1. Using npm to manage packages
 1. Using grunt to automate build and optimization of images / artifacts
-1. Using Travis-CI for an automated build with linting
+1. Using grunt to hook up ngrok task
+1. Using Travis-CI for an automated build w/ linting (via jshint/grunt)
 
 # Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
