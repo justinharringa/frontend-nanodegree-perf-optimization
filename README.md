@@ -31,12 +31,37 @@ an HTTP Server:
 # My Optimizations
 
 ## PageSpeed Score: Critical Rendering Path 
+1. Generating responsive images in build process (2e6ebe23c5df9b81536ebc55449394c500bd3a9c)
+1. Automatically add srcset to dist artifacts (fa3b202ac174a9e813234ce020d4dc52a6e2b441)
+1. Google Analytics should asynchronously load (1025b7980298842f8060f1339722aa64ebaff318)
+    * Also fix it for all pages (5975f3e7a4e3cdd658482a5ca091ebcfade42a2f)
+1. Defer load of CSS after visible content (44f83fee1179acf47e8c05e310339b08385a3723)
+1. Minify images in build process (88624ee3e2e0279bdfb0be09d210df0fd813b4b8)
+1. Minify HTML (0a8e5cc4009cce203fcde4e01521737b22facfe0)
+    * I put main style in CRP but took it back out later in 5b3c2972d0a0113ba4d2ec786c609048596ce133
+1. Minify CSS (2bc0186f7d65da34f5e88d95385619b89c50b28d)
+1. Uglify Javascript (e44ff669a47806a59b7f448539ac317a899e5b98)
+1. Require responsive pizzeria.jpg in index.html (0a3f7b50b3362f69c16c8619eac169667e7c6de9)
+1. print.css should only be used for print media (ae389551bca30c55b2aedc81081638432405aa53)
 
 ## Getting Rid of Jank
 
 ### Frame Rate
+1. Get movingPizzas parent using getElementById instead of selector (1fc384f2a79d42af995c92e2e133d6d81072646a)
+1. Read scrollTop before modifying pizza styles to avoid forced 
+synchronous layout (3a44c2c04cedd969dc95d7358bd880be55d4b32d)
+1. Schedule position updates with requestAnimationFrame and debounce 
+scroll handler (fefdcafd99a483784b93b07a9aad28be50e285d2, 
+20066a41bd8256ec21237d2ff5f66d84405b8adc)
+1. Get pizza position outside of update loop (0e1924cae7cf1ad440bca4d49fe1339683f96261)
+1. Only render 50 pizzas (316be58758c56418773c04385f3d1ce8dc7c2d05)
+1. Fix .mover width and move to CSS (c91e248c8274a048bb696d8d14cce30bcff97cb9)
+1. Use transform instead of modifying the left style (bf910d9bde8003840141858573d752dfcb43e137)
 
 ### Computational Efficiency
+1. Extract randomPizzaContainers NodeList variable (076bfa95c750a6e6c75133a47fcbfc6e6afba17e)
+1. Avoid force sync layout by calculating size once (1978b3409811b61185d9eb996ec3e34daea61ec0)
+1. requestAnimationFrame for painting of size/pizzas (d81657694347f939585d2b32ce3748717ad71cdf)
 
 ## Automation
 
