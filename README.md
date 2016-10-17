@@ -1,69 +1,46 @@
 # Project Requirements
 
 ## Install Node.js 5
-You should install Node.js AND update npm following [these instructions](https://docs.npmjs.com/getting-started/installing-node).
-*NOTE*: Node.js 6 won't work properly with grunt-responsive-images-extender 
+You should install Node.js AND update npm following 
+[these instructions](https://docs.npmjs.com/getting-started/installing-node).
+
+**NOTE**: Node.js 6 won't work properly with grunt-responsive-images-extender 
 ([see issue](https://github.com/stephanmax/grunt-responsive-images-extender/issues/12))
 
 ## Install Dependencies
-You will just need to run `npm install` to download the dependencies so long as you have installed Node.js 
-and updated npm as per the instructions referenced above.
+You will just need to run `npm install` to download the dependencies so 
+long as you have installed Node.js and updated npm as per the 
+instructions referenced above.
 
 ## Usage 
 
 ### Build the project
-Running `grunt` will clean and copy files to the `dist` directory and will also
-generate responsive files for all images.
+Running `grunt` will clean and copy files to the `dist` directory and 
+will also generate responsive files for all images.
 
 ### Check PageSpeed Insights
 Simply run `grunt psi-ngrok` to get PageSpeed Insights output
 
 ### Load via HTTP server to profile
-Run the following command from the root directory of the project to be able to load via an HTTP Server:
+If you'd like the local code accessible on the web, run the following 
+command from the root directory of the project to be able to load via 
+an HTTP Server:
 
 ```grunt http-server:dev```
 
-# Original README content
+# My Optimizations
 
-## Website Performance Optimization portfolio project
+## PageSpeed Score: Critical Rendering Path 
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+## Getting Rid of Jank
 
-To get started, check out the repository and inspect the code.
+### Frame Rate
 
-### Getting started
+### Computational Efficiency
 
-####Part 1: Optimize PageSpeed Insights score for index.html
 
-Some useful tips to help you get started:
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
-
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
-
-####Part 2: Optimize Frames per Second in pizza.html
-
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
-
-### Optimization Tips and Tricks
+# Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
 * [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
 * [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
@@ -75,7 +52,7 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
 
-### Customization with Bootstrap
+# Customization with Bootstrap
 The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
 
 * <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
