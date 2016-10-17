@@ -38,7 +38,11 @@ an HTTP Server:
 
 ### Computational Efficiency
 
+## Automation
 
+1. Using npm to manage packages
+1. Using grunt to automate build and optimization of images / artifacts
+1. Using Travis-CI for an automated build with linting
 
 # Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
