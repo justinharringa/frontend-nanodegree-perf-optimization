@@ -2,4 +2,3 @@ node_modules
 # IntelliJ / JetBrains artifacts
 .idea
 *.iml
-dist
