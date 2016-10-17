@@ -86,10 +86,10 @@ see also:
 
 ## Automation
 
-1. Using npm to manage packages
-1. Using grunt to automate build and optimization of images / artifacts
-1. Using grunt to hook up ngrok task
-1. Using Travis-CI for an automated build w/ linting (via jshint/grunt)
+1. [Using npm to manage packages](package.json)
+1. [Using grunt to automate build and optimization of images / artifacts](Gruntfile.js)
+1. [Using grunt to hook up ngrok task](Gruntfile.js)
+1. [Using Travis-CI for an automated build w/ linting (via jshint/grunt)](.travis.yml)
 
 # Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
