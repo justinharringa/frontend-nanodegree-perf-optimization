@@ -68,15 +68,15 @@
       <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 
-      <link href="css/style.css" rel="stylesheet">
-      <link href="css/print.css" rel="stylesheet" media="print">
+      <link href="css/style.css" rel="stylesheet" type="text/css">
+      <link href="css/print.css" rel="stylesheet" type="text/css" media="print">
     </noscript>
-    <script>
+    <script type="text/javascript">
       var loadDeferredStyles = function() {
         var addStylesNode = document.getElementById("deferred-styles");
         var replacement = document.createElement("div");
         replacement.innerHTML = addStylesNode.textContent;
-        document.body.appendChild(replacement)
+        document.body.appendChild(replacement);
         addStylesNode.parentElement.removeChild(addStylesNode);
       };
       var raf = requestAnimationFrame || mozRequestAnimationFrame ||
