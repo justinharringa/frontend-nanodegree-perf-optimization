@@ -542,7 +542,9 @@ window.addEventListener('scroll', scrollThosePizzas);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 50; i++) {
+  var rows = Math.round(window.screen.height / s);
+  var numPizzas = rows * cols;
+    for (var i = 0; i < numPizzas; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
