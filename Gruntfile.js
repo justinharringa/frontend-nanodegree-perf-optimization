@@ -53,10 +53,7 @@ module.exports = function (grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true,
-                        cwd: 'src/',
-                        src: ['**', '!views/images/pizzeria.jpg'],
-                        dest: 'dist/'}
+                    {expand: true, cwd: 'src/', src: ['**'], dest: 'dist/'}
                 ]
             }
         },
@@ -71,23 +68,7 @@ module.exports = function (grunt) {
                     src: ['img/**/*.{gif,png,jpg,jpeg}',
                         'views/**/*.{gif,png,jpg,jpeg}',
                         '!img/profilepic.jpg',
-                        '!views/images/*'],
-                    cwd: 'src/',
-                    dest: 'dist/'
-                }]
-            },
-            pizzeria: {
-                options: {
-                    engine: 'im',
-                    sizes: [
-                        { name: 'small', width: 320 },
-                        { name: 'medium', width: 640 },
-                        { name: 'large', width: 1024 },
-                        { name: 'default-no-rename', width: 100, rename: false}]
-                },
-                files: [{
-                    expand: true,
-                    src: ['views/images/pizzeria.jpg'],
+                        '!views/images/pizza.png'],
                     cwd: 'src/',
                     dest: 'dist/'
                 }]
