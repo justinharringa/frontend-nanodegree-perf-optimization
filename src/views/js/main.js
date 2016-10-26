@@ -500,13 +500,16 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
+// Hold a reference to static movingPizzas1
+var movingPizzas1Element = document.getElementById('movingPizzas1');
+
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
   // Get movingPizzas1 div and get its children (the pizzas)
-  var items = document.getElementById('movingPizzas1').childNodes;
+  var items = movingPizzas1Element.childNodes;
   // Calculate scrollTop / 1250 only once to read scrollTop layout once
   // before modifying style
   var scrollTopDividedBy1250 = (document.body.scrollTop / 1250);
