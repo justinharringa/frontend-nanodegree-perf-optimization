@@ -76,7 +76,10 @@ see also:
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/c91e248c8274a048bb696d8d14cce30bcff97cb9)
 1. [Use transform instead of modifying the left style]
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/bf910d9bde8003840141858573d752dfcb43e137)
-1. [Calculate how many pizzas should be created](2dfb88cace24ed4c6ae1f01c9d9710fa1e2ed062)
+1. [Calculate how many pizzas should be created]
+(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/2dfb88cace24ed4c6ae1f01c9d9710fa1e2ed062)
+1. [Hold reference to static movingPizzas1]
+(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/3965f172853cfb8f21011c73785fc6ac422fc6ac)
 
 ### Computational Efficiency
 1. [Extract randomPizzaContainers NodeList variable]
@@ -87,8 +90,10 @@ see also:
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/d81657694347f939585d2b32ce3748717ad71cdf)
 
 ### General Corrections
-1. [Change querySelectors to getElementById/getElementByClassName](8c3c97bd21ec6c000c8288f545277b0885ea0ac4)
-1. [Move getElementById call out of tight loop](0a638745f09fc51e2a6b1e685b45e1621933fd3a)
+1. [Change querySelectors to getElementById/getElementByClassName]
+(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/8c3c97bd21ec6c000c8288f545277b0885ea0ac4)
+1. [Move getElementById call out of tight loop]
+(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/0a638745f09fc51e2a6b1e685b45e1621933fd3a)
 
 ## Automation
 
