@@ -55,7 +55,10 @@ an HTTP Server:
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/0a3f7b50b3362f69c16c8619eac169667e7c6de9)
 1. [print.css should only be used for print media]
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/ae389551bca30c55b2aedc81081638432405aa53)
-1. [Resize pizzeria.jpg](9d1c057c4a043635a8ce171feab9a11a3824b224)
+1. [Add 100px pizzeria index img, remove Google font]
+(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/979b3aa2115bde623b4c4609ad1056446af2d5de)
+1. [Move styles to head / inline style.css]
+(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/d3df83eb815572f9105d7e0f97c4e6b20b787d14)
 
 ## Getting Rid of Jank
 
@@ -70,8 +73,6 @@ see also:
 [this commit](https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/20066a41bd8256ec21237d2ff5f66d84405b8adc)
 1. [Get pizza position outside of update loop]
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/0e1924cae7cf1ad440bca4d49fe1339683f96261)
-1. [Only render 50 pizzas]
-(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/316be58758c56418773c04385f3d1ce8dc7c2d05)
 1. [Fix .mover width and move to CSS]
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/c91e248c8274a048bb696d8d14cce30bcff97cb9)
 1. [Use transform instead of modifying the left style]
