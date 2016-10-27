@@ -81,6 +81,8 @@ see also:
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/2dfb88cace24ed4c6ae1f01c9d9710fa1e2ed062)
 1. [Hold reference to static movingPizzas1]
 (https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/3965f172853cfb8f21011c73785fc6ac422fc6ac)
+1. [Parameterize updatePositions with movingPizzas]
+(https://github.com/justinharringa/frontend-nanodegree-perf-optimization/commit/4b8fbce9f9c297d3e3b2f9ad936360b6c7debfc3)
 
 ### Computational Efficiency
 1. [Extract randomPizzaContainers NodeList variable]
