@@ -27,7 +27,7 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-http-server": "^2.0.0",
     "grunt-pagespeed": "^2.0.0",
-    "grunt-responsive-images": "^0.1.9",
+    "grunt-responsive-images": "^1.10.1",
     "grunt-responsive-images-extender": "3.0.0",
     "load-grunt-tasks": "^3.5.0",
     "ngrok": "^2.1.8"
