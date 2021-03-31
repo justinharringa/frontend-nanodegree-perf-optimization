@@ -24,7 +24,7 @@
     "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-imagemin": "^4.0.0",
     "grunt-contrib-jshint": "^3.0.0",
-    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
     "grunt-http-server": "^2.0.0",
     "grunt-pagespeed": "^2.0.0",
     "grunt-responsive-images": "^1.10.1",
