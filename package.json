@@ -30,6 +30,6 @@
     "grunt-responsive-images": "^1.10.1",
     "grunt-responsive-images-extender": "3.0.0",
     "load-grunt-tasks": "^5.1.0",
-    "ngrok": "^3.4.0"
+    "ngrok": "^4.0.1"
   }
 }
